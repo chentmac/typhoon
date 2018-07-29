@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Merchant</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/merchant.js"></script>
+    <style>
+    #pageSize{
+        width: 40px;
+    }
+    </style>
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"  id="audit"><a href="#">待审核</a></li>
+    <li role="presentation" class="" id="magree"><a href="passedmerchants.html">白名单</a></li>
+    <li role="presentation" class="" id="mdisagree"><a href="notpassedmerchants.html">黑名单</a></li>
+    <li role="presentation" class="" id="ad"><a href="ads.html">广告审核</a></li>
+</ul>
+<div class="container" align="center">
+    <h1 class="text-center">待审核商家</h1>
+    <div class="panel panel-default">
+    <table id="merchantList"  class="table table-hover table-striped">
+        <tr id="head">
+            <td>工商号</td>
+            <td>身份证号</td>
+            <td>姓名</td>
+            <td>图片</td>
+            <td>电话</td>
+            <td>商铺名</td>
+            <td>地址</td>
+            <td>备注</td>
+            <td colspan="3" class="text-center">操作</td>
+        </tr>
+    </table>
+    </div>
+    共<span id="totalPage"></span>页/<span id="totalCount"></span>条数据
+    每页显示<input type="number" id="pageSize" value=10>条
+    <nav aria-label="Page navigation" id="page">
+</nav>
+<input type="hidden" id="currentPage" value=1>
+</div>
+<!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel" >Reason</h4>
+                </div>
+                <div class="modal-body">
+                    请输入驳回原因：<input type="text" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="submit" data-dismiss="modal">提交</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

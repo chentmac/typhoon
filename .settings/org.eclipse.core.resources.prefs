@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/main/java/dao/AdDao.java=UTF-8
+encoding//src/main/java/dao/impl/AdDaoImpl.java=UTF-8
+encoding//src/main/java/filter/EncodingFilters.java=UTF-8
+encoding//src/main/java/pojo/Admin.java=UTF-8
+encoding//src/main/java/pojo/Merchant.java=UTF-8
+encoding//src/main/java/service/impl/JMSServiceImpl.java=UTF-8
+encoding//src/main/java/servlet/AdServlet.java=UTF-8
+encoding//src/main/java/servlet/AdminServlet.java=UTF-8
+encoding//src/main/java/servlet/MagreeServlet.java=UTF-8
+encoding//src/main/java/util/ImgUtil.java=UTF-8
+encoding//src/main/webapp/login.html=UTF-8
+encoding//src/main/webapp/merchant.html=UTF-8
+encoding//src/test/java/AdDaoImplTest.java=UTF-8
+encoding//src/test/java/SingleTonTest.java=UTF-8

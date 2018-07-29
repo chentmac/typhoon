@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app  
+        version="3.0"  
+        xmlns="http://java.sun.com/xml/ns/javaee"  
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+<welcome-file-list>
+	<welcome-file>login.html</welcome-file>
+</welcome-file-list>
+<context-param>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
+  </context-param>
+<filter>
+	<filter-name>EncodingFilters</filter-name>
+	<filter-class>filter.EncodingFilters</filter-class>
+</filter>
+<filter>
+	<filter-name>LoginFilter</filter-name>
+	<filter-class>filter.LoginFilter</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>EncodingFilters</filter-name>
+	<url-pattern>/</url-pattern>
+</filter-mapping>
+<filter-mapping>
+	<filter-name>LoginFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+<servlet>
+    <description></description>
+    <display-name>AdminServlet</display-name>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdServlet</display-name>
+    <servlet-name>AdServlet</servlet-name>
+    <servlet-class>servlet.AdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdServlet</servlet-name>
+    <url-pattern>/ads</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MerchantServlet</display-name>
+    <servlet-name>MerchantServlet</servlet-name>
+    <servlet-class>servlet.MerchantServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdAgreeServlet</servlet-name>
+  	<servlet-class>servlet.AdAgreeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>JMSServlet</servlet-name>
+  	<servlet-class>servlet.JMSServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+  	<servlet-name>InitServlet</servlet-name>
+  	<servlet-class>servlet.InitServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MdisgreeServlet</servlet-name>
+  	<servlet-class>servlet.MdisgreeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FindAgreeMerchants</servlet-name>
+  	<servlet-class>servlet.FindAgreeMerchants</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FindDisgreeMerchants</servlet-name>
+  	<servlet-class>servlet.FindDisgreeMerchants</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StatusCheck</servlet-name>
+  	<servlet-class>servlet.StatusCheck</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SendAds</servlet-name>
+  	<servlet-class>servlet.SendAds</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MagreeServlet</servlet-name>
+  	<servlet-class>servlet.MagreeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MrejectServlet</servlet-name>
+  	<servlet-class>servlet.MrejectServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AbcServlet</servlet-name>
+  	<servlet-class>servlet.AbcServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DelAdServlet</servlet-name>
+  	<servlet-class>servlet.DelAdServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>ChangeMStatusServlet</display-name>
+  	<servlet-name>ChangeMStatusServlet</servlet-name>
+  	<servlet-class>servlet.ChangeMStatusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MerchantServlet</servlet-name>
+    <url-pattern>/merchant</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdAgreeServlet</servlet-name>
+  	<url-pattern>/adagree</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>JMSServlet</servlet-name>
+  	<url-pattern>/JMSServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InitServlet</servlet-name>
+  	<url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MdisgreeServlet</servlet-name>
+  	<url-pattern>/mdisgree</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FindAgreeMerchants</servlet-name>
+  	<url-pattern>/findagreemerchants</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FindDisgreeMerchants</servlet-name>
+  	<url-pattern>/finddisgreemerchants</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StatusCheck</servlet-name>
+  	<url-pattern>/StatusCheck</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SendAds</servlet-name>
+  	<url-pattern>/SendAds</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MagreeServlet</servlet-name>
+  	<url-pattern>/magree</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MrejectServlet</servlet-name>
+  	<url-pattern>/mreject</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AbcServlet</servlet-name>
+  	<url-pattern>/abc</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DelAdServlet</servlet-name>
+  	<url-pattern>/deletead</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ChangeMStatusServlet</servlet-name>
+  	<url-pattern>/changemstatus</url-pattern>
+  </servlet-mapping>
+  <display-name>Archetype Created Web Application</display-name>
+</web-app>

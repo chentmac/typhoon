@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage AD</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ads.js"></script>
+    <style>
+    #pageSize{
+        width: 40px;
+    }
+    </style>
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li role="presentation" ><a href="merchant.html">待审核</a></li>
+    <li role="presentation"><a href="passedmerchants.html">白名单</a></li>
+    <li role="presentation" ><a href="notpassedmerchants.html">黑名单</a></li>
+    <li role="presentation" class="active"  ><a href="#">广告审核</a></li>
+</ul>
+<div class="container" align="center">
+    <h1 class="text-center">广告审核</h1>
+    <div class="panel panel-default">
+    <table id="ads"  class="table table-hover table-striped">
+        <tr id="head">
+            <td>店铺名</td>
+            <td>图片</td>
+            <td>介绍</td>
+            <td>竞价</td>
+            <td>状态</td>
+            <td colspan="2" class="text-center">操作</td>
+        </tr>
+    </table>
+    </div>
+    共<span id="totalPage"></span>页/<span id="totalCount"></span>条数据
+    每页显示<input type="number" id="pageSize" value=10>条
+    <nav aria-label="Page navigation" id="page">
+</nav>
+<input type="hidden" id="currentPage" value=1>
+</div>
+</body>
+</html>
